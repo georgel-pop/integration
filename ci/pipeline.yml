@@ -3,7 +3,7 @@ resources:
 - name: source-code
   type: git
   source:
-    uri: https://github.com/georgel-pop/integration.git
+    uri: {{GIT_URL}}
     branch: master
 
 jobs:
