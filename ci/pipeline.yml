@@ -5,6 +5,15 @@ resources:
   source:
     uri: {{GIT_URL}}
     branch: master
+- name: pcf-resource
+  type: cf
+  source:
+    api: https://api.system-dev.chdc20-cf.solera.com
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-organization}}
+    space: {{cf-space}}
+    skip_cert_check: false 
 
 jobs:
 - name: build-and-verify
@@ -19,3 +28,6 @@ jobs:
       M2_SETTINGS_REPO_PASSWORD: {{repo-password}}
       M2_SETTINGS_REPO_RELEASE_URI: {{repo-release-uri}}
       M2_SETTINGS_REPO_SNAPSHOT_URI: {{repo-snapshot-uri}}
+    -put: pcf-resource
+      manifest: source-code/manifest.yml
+      path: build-artifact/*.jar

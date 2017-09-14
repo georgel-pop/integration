@@ -7,3 +7,5 @@ cd source-code
 
 echo "Geo Calling Maven ..."
 mvn verify
+
+cp target/*.jar ../build-artifact

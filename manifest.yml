@@ -1,0 +1,4 @@
+---
+applications:
+- name: geo-integration
+  path: ./source-code/
