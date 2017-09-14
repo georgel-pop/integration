@@ -7,6 +7,4 @@ image_resource:
 inputs:
   - name: source-code
 run:
-  path: build.sh
-
-      
+  path: source-code/tasks/build.sh

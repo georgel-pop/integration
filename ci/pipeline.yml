@@ -12,4 +12,4 @@ jobs:
   - get: source-code
     trigger: true
   - task: build-and-verify
-    file: ../tasks/build.yml
+    file: source-code/tasks/build.yml
